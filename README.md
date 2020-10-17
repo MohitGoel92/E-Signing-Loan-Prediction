@@ -22,7 +22,7 @@ Any of the following screens, in which the applicant is approved/denied and give
 It is crucial to get a good feel about what the data contains and the characteristics of each variable. For the study of our data set, we will analyse Histrograms, the Correlation Plot and the Correlation Matrix. The code below produce the Correlation Plot:
 
 ```
-ds2.corrwith(ds['e_signed']).plot.bar(figsize = (20,10), 
+dataset.corrwith(ds['e_signed']).plot.bar(figsize = (20,10), 
                                       title = 'Correlation with E-Sign', 
                                       fontsize = 15, 
                                       rot = 60, 
