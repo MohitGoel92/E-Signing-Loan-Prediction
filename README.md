@@ -89,6 +89,11 @@ Confusion Matrix and Classification Models explanations: https://github.com/Mohi
 
 We will be using the classification_report, accuracy_score, precsion_score, recall_score and f1_score as metrics for evaluating the performance of our model.
 
+**Precision Score:** Of all the positives predicted, how many of them are correct. The formula is given by:
+
+True Positives/(True Positives + False Positives)
+
+**Recall Score:** 
 
 
 ## Conclusion
