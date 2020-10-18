@@ -60,7 +60,7 @@ sns.heatmap(corr, mask = mask, cmap = cmap, vmax = 0.4, center = 0,
 ```
 The darker the colour of the squares in the visualisation, the stronger the correlation (positive or negative).
 
-# Feature Scaling
+## Feature Scaling
 
 The Standard Scaler returns a numpy array of multiple dimensions. The problem with this process is that it loses the column names and index. The index is how we identify each set of fields to the user, and we would like the column names to be build within our model. We therefore save the scaled part into a different data frame by converting the result of the Standard Scaler into its data frame. During our data preprocessing stage, we therefore used the below code:
 
@@ -80,6 +80,16 @@ X_test2.index = X_test.index.values
 X_train = X_train2
 X_test = X_test2
 ```
+
+## Fitting The Models To The Dataset
+
+For our model building, we will be comparing the performance of Logistic Regression, Support Vector Machine (Linear and Gaussian RBF Kernel) and Random Forest Classification.
+
+Confusion Matrix and Classification Models explanations: https://github.com/MohitGoel92/Predicting-Customer-Purchases
+
+We will be using the classification_report, accuracy_score, precsion_score, recall_score and f1_score as metrics for evaluating the performance of our model.
+
+
 
 ## Conclusion
 
