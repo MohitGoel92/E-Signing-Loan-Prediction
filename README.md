@@ -114,11 +114,11 @@ Decision trees split features with regard to their target variables purity. The 
 
 **Gini Index:** 
 
-<img src = 'Screen1.png' width='600'>
+<img src = 'Screen1.png' width='300'>
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 
-<img src = 'Screen2.png' width='600'>
+<img src = 'Screen2.png' width='300'>
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 
