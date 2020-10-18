@@ -93,8 +93,11 @@ We will be using the classification_report, accuracy_score, precsion_score, reca
 
 True Positives/(True Positives + False Positives)
 
-**Recall Score:** 
+**Recall Score:** Of all the positives that truly exist, how many did we predict as true.
 
+True Positives/(True Positives + False Negatives)
+
+** F1 Score:** This is a function of the Precision Score and the Recall Score. It will be somewhere in between the two values.
 
 ## Conclusion
 
