@@ -118,7 +118,7 @@ Decision trees split features with regard to their target variables purity. The 
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 
-<img src = 'Screen2.png' width='330'>
+<img src = 'Screen2.png' width='350'>
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 
