@@ -102,11 +102,11 @@ True Positives/(True Positives + False Negatives)
 ## Model Summary
 
 ```
-	Model	Accuracy	Precision	Recall	F1 Score
-0	Logistic Regression	0.561977	0.575963	0.705913	0.634351
-1	SVM (Linear)	0.568398	0.577769	0.735996	0.647354
-2	SVM (RBF)	0.591569	0.605730	0.690871	0.645505
-3	Random Forest Classifier (n = 100)	0.621720	0.640098	0.678942	0.658948
+	       Model					Accuracy	Precision	Recall		F1 Score
+0	Logistic Regression				0.561977	0.575963	0.705913	0.634351
+1	SVM (Linear)					0.568398	0.577769	0.735996	0.647354
+2	SVM (RBF)					0.591569	0.605730	0.690871	0.645505
+3	Random Forest Classifier (n = 100)		0.621720	0.640098	0.678942	0.658948
 4	Random Forest Classifier (n = 100) + Tuning	0.630095	0.644189	0.698651	0.670316
 ```
 
