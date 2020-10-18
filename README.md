@@ -19,18 +19,45 @@ Any of the following screens, in which the applicant is approved/denied and give
 
 ## Understanding The Data
 
-It is crucial to get a good feel about what the data contains and the characteristics of each variable. For the study of our data set, we will analyse the Correlation Plot, Correlation Matrix and Histograms. The code below  is used to produce our Correlation Plot:
+It is crucial to get a good feel about what the data contains and the characteristics of each variable. For the study of our data set, we will analyse the Correlation Plot, Correlation Matrix and Histograms. The code below is used to produce our Correlation Plot:
 
 ```
 dataset.corrwith(ds['e_signed']).plot.bar(figsize = (20,10), 
-                                      title = 'Correlation with E-Sign', 
-                                      fontsize = 15, 
-                                      rot = 60, 
-                                      grid = True)
+                                          title = 'Correlation with E-Sign', 
+                                          fontsize = 15, 
+                                          rot = 60, 
+                                          grid = True)
 ```
-This will 
-                                      
+This will produce a bar plot where any bars above 0 indicate a positive correlation (as this variable increases the dependent variable is more likely) and any bars below 0 indicate a negative correlation (as this variable increases the dependent variable is less likely, and vise versa).
 
+To analyse the correlation of each variable with other variables, we analyse the Correlation Matrix. The Correlation Matrix is produced using the below equation:
+
+```
+# Correlation matrix of independent variables
+
+sns.set(style = 'white', font_scale = 1.1) # Builds the background
+
+# Compute the correlation matrix
+corr = ds.drop(columns = ['entry_id', 'pay_schedule','e_signed','months_employed']).corr() # Creating a 2D array of each correlation feature to each other
+
+# Generate a mask for the upper triangle
+mask = np.zeros_like(corr, dtype = np.bool)
+mask[np.triu_indices_from(mask)] = True # This creates a the lower diagonal of the matrix as it is symmetrical
+
+# Set up the matplotlib figure
+fig, axes = plt.subplots(figsize = (9,9)) # Size of the plot
+fig.suptitle("Correlation Matrix", fontsize = 40) # Title
+
+# Generate a custom diverging colourmap
+
+cmap = sns.diverging_palette(220, 10, as_cmap = True) # Colouring
+
+# Draw the heatmap with the mask and correct aspect ratio
+
+sns.heatmap(corr, mask = mask, cmap = cmap, vmax = 0.4, center = 0, 
+            square = True, linewidth = 0.5, cbar_kws = {'shrink': 0.5})
+```
+The darker the colour of the squares in our visualisation, the stronger the correlation.
 
 ## Conclusion
 
