@@ -107,9 +107,10 @@ Decision trees split features with regard to their target variables purity. The 
 
 **Note:** Purity can be thought of how homogenised a group is.
 
-**Example:** - If we have 4 gold coins and 0 silver coins, the group of 4 gold coins is 100% pure.
-             - If we have 2 gold coins and 2 silver coins, that group is 100%.
-	     - If we have 3 gold coins and 1 silver coin, that group is either 75% or 81% pure, using Gini or Entropy respectively.
+**Example:** 
+- If we have 4 gold coins and 0 silver coins, the group of 4 gold coins is 100% pure.
+- If we have 2 gold coins and 2 silver coins, that group is 100%.
+- If we have 3 gold coins and 1 silver coin, that group is either 75% or 81% pure, using Gini or Entropy respectively.
 
 
 
