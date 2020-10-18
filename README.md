@@ -99,6 +99,22 @@ True Positives/(True Positives + False Negatives)
 
 **F1 Score:** This is a function of the Precision Score and the Recall Score. It will be somewhere in between the two values.
 
+## Entropy (Information Gain) Vs Gini Index
+
+During the parameter tuning step, we compare the performance of the entropy and gini criterion. In short, entropy maximises the informational content the random forest classifier receives after every split. However, the gini criterion minimises the probability of mislabelling. Therefore the gini criterion splits the data in a way that it values not mislabelling the terminal leaves. The gini criterion is quicker than entropy due to entropy containing a logarithmic term.
+
+Decision trees split features with regard to their target variables purity. The aim of the algorithm is to find the optimal point to split the data into two sets. The two new sets target variable will be more pure than the original datasets.
+
+**Note:** Purity can be thought of how homogenised a group is.
+
+**Example:** - If we have 4 gold coins and 0 silver coins, the group of 4 gold coins is 100% pure.
+             - If we have 2 gold coins and 2 silver coins, that group is 100%.
+	     - If we have 3 gold coins and 1 silver coin, that group is either 75% or 81% pure, using Gini or Entropy respectively.
+
+
+
+
+
 ## Models Summary
 
 ```
