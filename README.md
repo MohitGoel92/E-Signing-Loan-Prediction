@@ -99,6 +99,17 @@ True Positives/(True Positives + False Negatives)
 
 **F1 Score:** This is a function of the Precision Score and the Recall Score. It will be somewhere in between the two values.
 
+## Model Summary
+
+```
+	Model	Accuracy	Precision	Recall	F1 Score
+0	Logistic Regression	0.561977	0.575963	0.705913	0.634351
+1	SVM (Linear)	0.568398	0.577769	0.735996	0.647354
+2	SVM (RBF)	0.591569	0.605730	0.690871	0.645505
+3	Random Forest Classifier (n = 100)	0.621720	0.640098	0.678942	0.658948
+4	Random Forest Classifier (n = 100) + Tuning	0.630095	0.644189	0.698651	0.670316
+```
+
 ## Conclusion
 
 Our model has given us an accuracy of around 63%. WIth this, we have an algorithm that can help predict whether or not a user will complete the e-signing step of the loan application. One way to leverage this model is to target those predicted to not reach the e-sign phase with customised onboarding. This means that when a lead arrives from the marketplace, they may receive a different onboarding experience based on how likely they are to finish the general onboarding process. This can help our company minimise how many people drop off from the funnel. This funnel of screens is as effective as we, as a company, build it. Therefore, user drop-off in this funnel falls entirely on our shoulders. So, with new onboarding screens built intentionally to lead users to finalise the loan application, we can attempt to get more than 40% of the predicted not to finish the process to complete the e-sign step. If we can do this, then we can drastically increase profits. Many lending companies provide hundreds of loans every day, gaining money from each one. As a result, if we can increase the number of loan takers, we are increasing profits with this model. Although simple models may not be perfect, they can surely indicate where/how the company's finite resources may be reallocated to improve profits.
