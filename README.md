@@ -38,7 +38,8 @@ To analyse the correlation of each variable with other variables, we analyse the
 sns.set(style = 'white', font_scale = 1.1) # Builds the background
 
 # Compute the correlation matrix
-corr = ds.drop(columns = ['entry_id', 'pay_schedule','e_signed','months_employed']).corr() # Creating a 2D array of each correlation feature to each other
+# Creating a 2D array of each correlation feature to each other
+corr = ds.drop(columns = ['entry_id', 'pay_schedule','e_signed','months_employed']).corr()
 
 # Generate a mask for the upper triangle
 mask = np.zeros_like(corr, dtype = np.bool)
