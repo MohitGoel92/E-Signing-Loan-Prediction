@@ -97,7 +97,7 @@ True Positives/(True Positives + False Positives)
 
 True Positives/(True Positives + False Negatives)
 
-** F1 Score:** This is a function of the Precision Score and the Recall Score. It will be somewhere in between the two values.
+**F1 Score:** This is a function of the Precision Score and the Recall Score. It will be somewhere in between the two values.
 
 ## Conclusion
 
