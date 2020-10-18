@@ -112,10 +112,6 @@ Decision trees split features with regard to their target variables purity. The 
 - If we have 2 gold coins and 2 silver coins, that group is 100%.
 - If we have 3 gold coins and 1 silver coin, that group is either 75% or 81% pure, using Gini or Entropy respectively.
 
-
-
-
-
 ## Models Summary
 
 ```
