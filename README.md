@@ -58,7 +58,24 @@ cmap = sns.diverging_palette(220, 10, as_cmap = True) # Colouring
 sns.heatmap(corr, mask = mask, cmap = cmap, vmax = 0.4, center = 0, 
             square = True, linewidth = 0.5, cbar_kws = {'shrink': 0.5})
 ```
-The darker the colour of the squares in our visualisation, the stronger the correlation.
+The darker the colour of the squares in the visualisation, the stronger the correlation (positive or negative).
+
+# Feature Scaling
+
+The Standard Scaler returns a numpy array of multiple dimensions. The problem with this process is that it loses the column names and index. The index is how we identify each set of fields to the user, and we would like the column names to be build within our model. We therefore save the scaled part into a different data frame by converting the result of the Standard Scaler into its data frame. During our data preprocessing stage, we therefore used the below code:
+
+```
+from sklearn.preprocessing import StandardScaler
+sc_X = StandardScaler()
+X_train2 = pd.DataFrame(sc_X.fit_transform(X_train))
+X_test2 = pd.DataFrame(sc_X.transform(X_test))
+X_train2.columns = X_train.columns.values
+X_test2.columns = X_test.columns.values
+X_train2.index = X_train.index.values
+X_test2.index = X_test.index.values
+X_train = X_train2
+X_test = X_test2
+```
 
 ## Conclusion
 
