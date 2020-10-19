@@ -124,9 +124,58 @@ To put this into practice, let's revisit the example where we had 4 gold coins a
 Gini Index = 1 - (probability_gold^2 + probability_silver^2) = 1 - (1^2 + 0^2) = 0
 ```
 
+From the above, we establish that the impurity measurement is 0. This is because we would never label any coin incorrectly. If we labelled all gold coins silver, the index will still be 0 as we would always incorrectly label the coins. A gini score of 0 is the most pure score possible.
+
+For the example where we had 2 gold coins and 2 silver coins, using the formula for gini we get:
+
+```
+Gini Index = 1 - (probability_gold^2 + probability_silver^2) = 1 - (0.5^2 + 0.5^2) = 0.5
+```
+
+The impurity measurement of 0.5 indicates that we will incorrectly label the coins 1 out of 2 times (half the time). A gini index of 0.5 is the least pure score possible.
+
+**Note:** Dividing the gini score by 0.5 can help us interpret what the score represents. For instance, the gini score 0.5 divided by 0.5 gives us 1. This means the grouping is as impure as possible in a group with just two outcomes.
+
+For the example where we had 3 gold coins and 1 silver coin, using the formula for gini we get:
+
+```
+Gini Index = 1 - (probability_gold^2 + probability_silver^2) = 1 - (0.75^2 + 0.25^2) = 0.375
+```
+
+The impurity measurement here is 0.375. If we divide this by 0.5 we will get 0.75, which is the probability of labelling correctly or incorrectly.
+
+**Entropy Intuition:** 
+
 <img src = 'Screen2.png' width='350'>
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
+
+To put this into practice, let's revisit the example where we had 4 gold coins and 0 silver coins. Using the formula above, we get:
+
+```
+Entropy = [(probability_gold)*log2(probability_gold)] - [(probability_silver)*log2(probability_silver)] = [(4/4)*log2(4/4)] - [(0/4)*log2(0/4)] = 0
+```
+
+From the above, we establish that the impurity measurement is 0. This is because we would never label any coin incorrectly. If we labelled all gold coins silver, the index will still be 0 as we would always incorrectly label the coins. A gini score of 0 is the most pure score possible.
+
+For the example where we had 2 gold coins and 2 silver coins, using the formula for gini we get:
+
+```
+Gini Index = 1 - (probability_gold^2 + probability_silver^2) = 1 - (0.5^2 + 0.5^2) = 0.5
+```
+
+The impurity measurement of 0.5 indicates that we will incorrectly label the coins 1 out of 2 times (half the time). A gini index of 0.5 is the least pure score possible.
+
+**Note:** Dividing the gini score by 0.5 can help us interpret what the score represents. For instance, the gini score 0.5 divided by 0.5 gives us 1. This means the grouping is as impure as possible in a group with just two outcomes.
+
+For the example where we had 3 gold coins and 1 silver coin, using the formula for gini we get:
+
+```
+Gini Index = 1 - (probability_gold^2 + probability_silver^2) = 1 - (0.75^2 + 0.25^2) = 0.375
+```
+
+The impurity measurement here is 0.375. If we divide this by 0.5 we will get 0.75, which is the probability of labelling correctly or incorrectly.
+
 
 ## Models Summary
 
