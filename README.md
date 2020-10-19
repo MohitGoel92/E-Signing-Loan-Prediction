@@ -178,9 +178,8 @@ The purity/impurity measurement here is 0.811, which is worse than the gini scor
 
 Information gain is the reason why impurity is of importance. Once we derive the impurity of the dataset, we observe how much information is gained as we go down the tree and measure the impurity of the nodes.
 
-```
-Information Gain = How much Entropy we remove
-'''
+**Information Gain = How much Entropy we remove**
+
 
 
 ## Models Summary
