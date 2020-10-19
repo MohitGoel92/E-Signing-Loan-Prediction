@@ -112,12 +112,16 @@ Decision trees split features with regard to their target variables purity. The 
 - If we have 2 gold coins and 2 silver coins, that group is 100%.
 - If we have 3 gold coins and 1 silver coin, that group is either 75% or 81% pure, using Gini or Entropy respectively.
 
-**Gini Index:** 
+**Gini Index:** The goal is to measure how often a randomly chosen element from the set would be incorrectly labeled.
 
 <img src = 'Screen1.png' width='300'>
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 
+To put this into practice, let's revisit the example where we had 4 gold coins and 0 silver coins. Using the formula above, we get:
+```
+\LARGE Gini Index = 1 - (probability_gold^{2} + probability_silver^{2}) = 1 - (1^{2} + 0^{2}) = 0
+```
 <img src = 'Screen2.png' width='350'>
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
@@ -125,7 +129,7 @@ Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 ## Models Summary
 
 ```
-	       Model					Accuracy	Precision	Recall		F1 Score
+	       Model					Accuracy	Precision	 Recall		F1 Score
 0	Logistic Regression				0.561977	0.575963	0.705913	0.634351
 1	SVM (Linear)					0.568398	0.577769	0.735996	0.647354
 2	SVM (RBF)					0.591569	0.605730	0.690871	0.645505
