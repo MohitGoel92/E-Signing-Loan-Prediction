@@ -119,9 +119,11 @@ Decision trees split features with regard to their target variables purity. The 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 
 To put this into practice, let's revisit the example where we had 4 gold coins and 0 silver coins. Using the formula above, we get:
+```
 $$
 \LARGE Gini Index = 1 - (probability_gold^{2} + probability_silver^{2}) = 1 - (1^{2} + 0^{2}) = 0
 $$
+```
 <img src = 'Screen2.png' width='350'>
 
 Image source: https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
