@@ -180,7 +180,7 @@ Information gain is the reason why impurity is of importance. Once we derive the
 
 **Information Gain = How much Entropy we remove**
 
-
+Therefore, higher information gain results in more entropy being removed. In the perfect case, each branch would contain only one color after the split (gold or silver), which would result in zero entropy.
 
 ## Models Summary
 
